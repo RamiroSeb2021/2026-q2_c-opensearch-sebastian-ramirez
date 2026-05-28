@@ -1,0 +1,13 @@
+.DS_Store
+*.log
+.env
+
+# Local editor files
+.idea/
+.vscode/
+
+# OpenSearch local exports / temporary files
+tmp/
+
+# Agent transient local cache
+.atl/

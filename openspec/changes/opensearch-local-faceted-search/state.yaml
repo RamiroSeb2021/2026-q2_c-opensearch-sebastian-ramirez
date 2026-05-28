@@ -1,0 +1,14 @@
+change: opensearch-local-faceted-search
+status: planning
+artifact_store: both
+execution_mode: interactive
+chained_pr_strategy: ask-always
+review_budget_lines: 400
+phases:
+  proposal: complete
+  spec: complete
+  design: complete
+  tasks: complete
+  apply: pending
+  verify: pending
+  archive: pending

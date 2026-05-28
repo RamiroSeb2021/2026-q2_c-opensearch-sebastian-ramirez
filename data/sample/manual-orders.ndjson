@@ -1,0 +1,10 @@
+{ "index": { "_id": "manual-1001" } }
+{ "order_id": "manual-1001", "customer_id": "cust-501", "order_date": "2026-05-01T10:15:00Z", "category": "Electronics", "manufacturer": "Northwind Audio", "country": "AR", "currency": "USD", "quantity": 2, "taxful_total_price": 189.98, "products": [{ "sku": "aud-101", "name": "Wireless headphones", "quantity": 1, "price": 129.99 }, { "sku": "acc-204", "name": "USB-C charger", "quantity": 1, "price": 59.99 }] }
+{ "index": { "_id": "manual-1002" } }
+{ "order_id": "manual-1002", "customer_id": "cust-502", "order_date": "2026-05-03T14:40:00Z", "category": "Women's Clothing", "manufacturer": "Atlas Apparel", "country": "UY", "currency": "USD", "quantity": 3, "taxful_total_price": 154.50, "products": [{ "sku": "wcl-310", "name": "Linen jacket", "quantity": 1, "price": 89.50 }, { "sku": "wcl-311", "name": "Cotton t-shirt", "quantity": 2, "price": 32.50 }] }
+{ "index": { "_id": "manual-1003" } }
+{ "order_id": "manual-1003", "customer_id": "cust-503", "order_date": "2026-05-05T09:05:00Z", "category": "Men's Shoes", "manufacturer": "Riverwalk Footwear", "country": "CL", "currency": "USD", "quantity": 1, "taxful_total_price": 74.99, "products": [{ "sku": "msh-220", "name": "Canvas sneakers", "quantity": 1, "price": 74.99 }] }
+{ "index": { "_id": "manual-1004" } }
+{ "order_id": "manual-1004", "customer_id": "cust-504", "order_date": "2026-05-07T18:25:00Z", "category": "Home", "manufacturer": "Casa Norte", "country": "AR", "currency": "USD", "quantity": 4, "taxful_total_price": 96.40, "products": [{ "sku": "hom-410", "name": "Ceramic mug set", "quantity": 2, "price": 18.20 }, { "sku": "hom-411", "name": "Cotton kitchen towels", "quantity": 2, "price": 30.00 }] }
+{ "index": { "_id": "manual-1005" } }
+{ "order_id": "manual-1005", "customer_id": "cust-505", "order_date": "2026-05-09T12:10:00Z", "category": "Electronics", "manufacturer": "Patagonia Devices", "country": "BR", "currency": "USD", "quantity": 1, "taxful_total_price": 249.00, "products": [{ "sku": "tab-510", "name": "Compact tablet", "quantity": 1, "price": 249.00 }] }

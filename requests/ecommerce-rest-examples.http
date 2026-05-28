@@ -1,0 +1,128 @@
+@baseUrl = https://localhost:9200
+@index = opensearch_dashboards_sample_data_ecommerce
+
+### Cluster health
+GET {{baseUrl}}/_cluster/health
+Authorization: Basic admin admin
+
+### List indices
+GET {{baseUrl}}/_cat/indices?v
+Authorization: Basic admin admin
+
+### One eCommerce document
+GET {{baseUrl}}/{{index}}/_search?size=1
+Authorization: Basic admin admin
+
+### Count eCommerce documents
+GET {{baseUrl}}/{{index}}/_count
+Authorization: Basic admin admin
+
+### Mapping
+GET {{baseUrl}}/{{index}}/_mapping
+Authorization: Basic admin admin
+
+### Settings
+GET {{baseUrl}}/{{index}}/_settings
+Authorization: Basic admin admin
+
+### Terms aggregation by category
+GET {{baseUrl}}/{{index}}/_search
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{
+  "size": 0,
+  "aggs": {
+    "por_categoria": {
+      "terms": {
+        "field": "category.keyword",
+        "size": 10
+      }
+    }
+  }
+}
+
+### Terms aggregation by manufacturer
+GET {{baseUrl}}/{{index}}/_search
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{
+  "size": 0,
+  "aggs": {
+    "por_fabricante": {
+      "terms": {
+        "field": "manufacturer.keyword",
+        "size": 10
+      }
+    }
+  }
+}
+
+### Terms aggregation by country
+GET {{baseUrl}}/{{index}}/_search
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{
+  "size": 0,
+  "aggs": {
+    "por_pais": {
+      "terms": {
+        "field": "geoip.country_iso_code",
+        "size": 10
+      }
+    }
+  }
+}
+
+### Filtered faceted search
+GET {{baseUrl}}/{{index}}/_search
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{
+  "size": 0,
+  "query": {
+    "bool": {
+      "filter": [
+        { "term": { "category.keyword": "Men's Clothing" } }
+      ]
+    }
+  },
+  "aggs": {
+    "por_fabricante": {
+      "terms": {
+        "field": "manufacturer.keyword",
+        "size": 10
+      }
+    },
+    "por_pais": {
+      "terms": {
+        "field": "geoip.country_iso_code",
+        "size": 10
+      }
+    }
+  }
+}
+
+### Range aggregation by taxful total price
+GET {{baseUrl}}/{{index}}/_search
+Authorization: Basic admin admin
+Content-Type: application/json
+
+{
+  "size": 0,
+  "aggs": {
+    "rangos_de_precio": {
+      "range": {
+        "field": "taxful_total_price",
+        "ranges": [
+          { "key": "menos_de_50", "to": 50 },
+          { "key": "50_a_100", "from": 50, "to": 100 },
+          { "key": "100_o_mas", "from": 100 }
+        ]
+      }
+    }
+  }
+}

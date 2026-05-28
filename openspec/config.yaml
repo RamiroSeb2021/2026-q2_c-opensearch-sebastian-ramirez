@@ -1,0 +1,34 @@
+schema: spec-driven
+
+context: |
+  Project: OpenSearch local installation and faceted search learning assignment.
+  Stack: Docker Compose, OpenSearch, OpenSearch Dashboards, curl, Markdown documentation.
+  Architecture: documentation-first exercise repo with local infrastructure config and REST examples.
+  Testing: manual verification through Docker Compose, OpenSearch Dashboards, and REST API calls.
+  Style: guide-first; the learner writes key files step by step instead of receiving generated final files.
+
+testing:
+  strict_tdd: false
+  reason: No application test runner exists; verification is operational/manual.
+  test_command: ""
+
+rules:
+  proposal:
+    - Keep the learning objective explicit.
+    - Prefer small steps that explain why each file exists.
+  specs:
+    - Use Given/When/Then scenarios.
+    - Keep acceptance criteria verifiable manually.
+  design:
+    - Document Docker services and ports clearly.
+    - Separate local environment, data loading, dashboards, and REST API exploration.
+  tasks:
+    - Group by phase, use hierarchical numbering.
+    - Keep tasks completable in one session.
+  apply:
+    tdd: false
+    test_command: ""
+  verify:
+    test_command: "docker compose ps && curl -k -u admin:admin https://localhost:9200"
+    build_command: ""
+    coverage_threshold: 0
