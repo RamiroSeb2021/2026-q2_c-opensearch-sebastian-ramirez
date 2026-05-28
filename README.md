@@ -104,6 +104,10 @@ Crear o clonar un dashboard basado en Sample eCommerce orders. Debe incluir:
 
 La guía detallada está en `docs/dashboard/README.md`.
 
+### Evidencia del dashboard
+
+![Dashboard eCommerce con visualizaciones de ventas, género, precio promedio, cantidad promedio y ventas por categoría](docs/screenshots/03-dashboard-overview.png)
+
 ## Exploración REST
 
 El índice principal del ejercicio es:
